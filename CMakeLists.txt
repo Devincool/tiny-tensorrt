@@ -41,7 +41,7 @@ file(GLOB_RECURSE trt_source
      plugin/*.cpp
      )
 cuda_add_library(tinytrt SHARED ${trt_source})
-target_compile_options(tinytrt PUBLIC -std=c++11 -Wall -Wfloat-conversion)
+target_compile_options(tinytrt PUBLIC -std=c++11 -Wall)
 set_target_properties(tinytrt PROPERTIES POSITION_INDEPENDENT_CODE ON)
 
 if(BUILD_PYTHON)
